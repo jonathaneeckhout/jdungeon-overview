@@ -5,7 +5,7 @@ An overview repo to link everything together for the jdungeon project
 - [level-server](https://github.com/jonathaneeckhout/jdungeon-level-server) - The server responsible for the certain level
 - [common-server](https://github.com/jonathaneeckhout/jdungeon-common-server)
 - [website](https://github.com/jonathaneeckhout/jdungeon-website)
-- [deployer](https://github.com/jonathaneeckhout/deployer)
+- [deployer](https://github.com/jonathaneeckhout/jdungeon-deployer)
 
 ## Architecture
 ![Diagram](jdungeon-architecture.drawio.svg)
