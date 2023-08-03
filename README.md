@@ -33,24 +33,72 @@ git clone https://github.com/jonathaneeckhout/jdungeon-common-server
 git clone https://github.com/jonathaneeckhout/jdungeon-website
 git clone https://github.com/jonathaneeckhout/jdungeon-database
 ```
-To ease configuration with environment variables, jdungeon can make use of .env files. Create the following .env files and change the variables to your needs.
+Next we need to generate some self signed certificates that will be used for TLS. Use the following script inside the jdungeon folder to generate the certificates.
+```bash
+#!/bin/bash
+
+# Change the following variables as needed
+domain="localhost"
+validity_days=365
+
+# Generate private key and CSR
+openssl req -new -newkey rsa:2048 -nodes -keyout "$domain.key" -out "$domain.csr" -subj "/C=US/ST=State/L=City/O=Organization/OU=Unit/CN=$domain/emailAddress=admin@$domain"
+
+# Generate self-signed certificate
+openssl x509 -req -days $validity_days -in "$domain.csr" -signkey "$domain.key" -out "$domain.crt"
+
+# Optional: Display the generated certificate
+openssl x509 -text -noout -in "$domain.crt"
+```
 #### jdungeon-database
+Make sure that you have docker and docker-compose installed for this step.
+Create the .env file.
 ```bash
 cd jdungeon-database
-touch .env
 nano .env
 ```
-The content of jdungeon-datase/.env is
+The content of .env file is.
 ```bash
 POSTGRES_USER=testuser
 POSTGRES_PASSWORD=testpassword
 POSTGRES_DB=jdungeon
 ```
-Next you can run the database
+Next you can run the database in the terminal.
 ```bash
 docker-compose up
-or if you want to deamonize it
+```
+Or if you want to deamonize it.
+```bash
 docker-compose up -d
+```
+#### jdungeon-common server
+Make sure that you have node and npm installed for this step.
+Create the .env file.
+```bash
+cd jdungeon-common-server
+npm install
+nano .env
+```
+The content of the .env file is.
+```bash
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=testuser
+POSTGRES_PASSWORD=testpassword
+POSTGRES_DB=jdungeon
+
+STARTER_LEVEL="Grassland"
+STARTER_POS ='{"x":128.0,"y":128.0}'
+
+APP_PORT=3000
+APP_CRT=../localhost.crt
+APP_KEY=../localhost.key
+
+COOKIE_SECRET="jdungeon"
+```
+Next you can run the database in the terminal.
+```bash
+node main.js
 ```
 
 ## How to contribute
