@@ -96,6 +96,23 @@ APP_KEY=../localhost.key
 
 COOKIE_SECRET="jdungeon"
 ```
+The common server can also populate the database with some credential information needed for the level servers. This is done by creating a .init.json file.
+```bash
+nano .init.json
+```
+And the content of the .init.json file is.
+```json
+{
+   "levels": [
+       {
+           "level": "Grassland",
+           "key": "testpassword",
+           "address": "127.0.0.1",
+           "port": 4432
+       }
+   ]
+}
+````
 Next you can run the database in the terminal.
 ```bash
 node main.js
