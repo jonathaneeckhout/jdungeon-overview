@@ -1,5 +1,7 @@
 # jdungeon-overview
 An overview repo to link everything together for the jdungeon project
+
+
 ## Repositories
 - [client](https://github.com/jonathaneeckhout/jdungeon-client)
 - [level-server](https://github.com/jonathaneeckhout/jdungeon-level-server)
@@ -8,11 +10,31 @@ An overview repo to link everything together for the jdungeon project
 - [database](https://github.com/jonathaneeckhout/jdungeon-database)
 - [deployer](https://github.com/jonathaneeckhout/jdungeon-deployer)
 
+
 ## Architecture
+The heart of JDungeon is the database, this is the place where all persistent information is stored for JDungeon like user credentials, gold, inventory,... 
+
+There are 2 services connected directly to the database:
+- the website
+- the common-server
+
+The website contains some information about the game but is mainly used to create new accounts and a place to download the clients.
+
+The common server however is the authority server. This server is responsible to login players to the game and store and retrieve persistent data.
+
+The level-server is the server directly in contact with the player and responsible of all the game logic of that world. Currently there is only one, the "Grassland" level server, but the idea is that there would be multiple level-servers running with each responsible for it's part in the world. This is mainly done to distribute the load over multiple instances.
+
+On the user side you have the client which send an authority request to the common-server and is steered to the level-server depending where the character was located at last login. This is the typical game that you install locally on your pc.
+
+Finally you have the deployer. This repository is mainly a grouping of github actions to automate the deployment process. By simply updating the versions inside some files and commiting it to github the game is automatically deployed in a matter of minutes.
+
 ![Diagram](jdungeon-architecture.drawio.svg)
+
 
 ## How to run locally
 This section explains how to run your own instance of JDungeon. It will provide example commands focussed on Linux but the main concepts can be transfered to Windows as well.
+
+
 ### Dependencies
 Make sure the following packages/programs are installed
 - git
@@ -21,6 +43,8 @@ Make sure the following packages/programs are installed
 - docker
 - docker-compose
 - godot version 4.x (take the latest stable)
+
+
 ### Setup
 Download all the needded repos, for ease of use make a general jdungeon directory
 ```bash
@@ -50,6 +74,8 @@ openssl x509 -req -days $validity_days -in "$domain.csr" -signkey "$domain.key" 
 # Optional: Display the generated certificate
 openssl x509 -text -noout -in "$domain.crt"
 ```
+
+
 #### jdungeon-database
 Make sure that you have docker and docker-compose installed for this step.
 Create the .env file.
@@ -71,6 +97,8 @@ Or if you want to deamonize it.
 ```bash
 docker-compose up -d
 ```
+
+
 #### jdungeon-website
 Make sure that you have node and npm installed for this step.
 Create the .env file.
@@ -108,6 +136,7 @@ email: test@test.com
 password: testpassword
 ```
 When pressing register check your terminal and a link should be printed to the /verify path. Copy this link and open it in your browsers and verify the account. If succeeded the account is ready to be used in the client.
+
 
 #### jdungeon-common-server
 Make sure that you have node and npm installed for this step.
@@ -155,6 +184,7 @@ Next you can run the database in the terminal.
 ```bash
 node main.js
 ```
+
 #### jdungeon-level-server
 Make sure that you godot installed for this step
 Create the .env file.
