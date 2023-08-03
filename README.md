@@ -181,8 +181,9 @@ Next you can open op the godot project via de gui or via command line.
 ```bash
 Godot_v4.x project.godot
 ```
+Now just run the multiplayer scene.
 #### jdungeon-client
-Make sure that you godot installed for this step
+Make sure that you godot installed for this step.
 Create the .env file.
 ```bash
 cd jdungeon-client
@@ -203,4 +204,5 @@ Next you can open op the godot project via de gui or via command line.
 ```bash
 Godot_v4.x project.godot
 ```
+Now just run the multiplayer scene and login to the server.
 ## How to contribute
