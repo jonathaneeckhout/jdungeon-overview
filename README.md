@@ -71,7 +71,45 @@ Or if you want to deamonize it.
 ```bash
 docker-compose up -d
 ```
-#### jdungeon-common server
+#### jdungeon-website
+Make sure that you have node and npm installed for this step.
+Create the .env file.
+```bash
+cd jdungeon-website
+npm install
+nano .env
+```
+The content of the .env file is.
+```bash
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=testuser
+POSTGRES_PASSWORD=testpassword
+POSTGRES_DB=jdungeon
+
+DEBUG=true
+
+CERT_PATH=../localhost.crt
+KEY_PATH=../localhost.key
+```
+Next you can run the database in the terminal.
+```bash
+node main.js
+```
+Open up your browser and go the following link.
+```bash
+https://localhost:8443
+```
+Accept the risk as the website uses your own self signed certificate.
+Go to the create account section and fill in some credentials.
+```bash
+username: testplayer
+email: test@test.com
+password: testpassword
+```
+When pressing register check your terminal and a link should be printed to the /verify path. Copy this link and open it in your browsers and verify the account. If succeeded the account is ready to be used in the client.
+
+#### jdungeon-common-server
 Make sure that you have node and npm installed for this step.
 Create the .env file.
 ```bash
