@@ -117,5 +117,52 @@ Next you can run the database in the terminal.
 ```bash
 node main.js
 ```
+#### jdungeon-level-server
+Make sure that you godot installed for this step
+Create the .env file.
+```bash
+cd jdungeon-level-server
+nano .env
+```
+The content of .env file is.
+```bash
+DEBUG=true
 
+LEVEL_PORT=4432
+LEVEL_MAX_PEERS=128
+
+LEVEL="Grassland"
+SECRET="testpassword"
+
+LEVEL_CRT=../localhost.crt
+LEVEL_KEY=../localhost.key
+
+COMMON_SERVER_ADDRESS="https://localhost:3000"
+```
+Next you can open op the godot project via de gui or via command line.
+```bash
+Godot_v4.x project.godot
+```
+#### jdungeon-client
+Make sure that you godot installed for this step
+Create the .env file.
+```bash
+cd jdungeon-client
+nano .env
+```
+The content of .env file is.
+```bash
+DEBUG=true
+
+COMMON_SERVER_ADDRESS=https://localhost:3000
+COMMON_SERVER_HOST=localhost
+COMMON_SERVER_PORT=3000
+
+DEBUG_USERNAME=testplayer
+DEBUG_PASSWORD=testpassword
+```
+Next you can open op the godot project via de gui or via command line.
+```bash
+Godot_v4.x project.godot
+```
 ## How to contribute
