@@ -1,8 +1,8 @@
 # jdungeon-overview
 An overview repo to link everything together for the jdungeon project
 ## Repositories
-- [client](https://github.com/jonathaneeckhout/jdungeon-client) - The game client
-- [level-server](https://github.com/jonathaneeckhout/jdungeon-level-server) - The server responsible for the certain level
+- [client](https://github.com/jonathaneeckhout/jdungeon-client)
+- [level-server](https://github.com/jonathaneeckhout/jdungeon-level-server)
 - [common-server](https://github.com/jonathaneeckhout/jdungeon-common-server)
 - [website](https://github.com/jonathaneeckhout/jdungeon-website)
 - [database](https://github.com/jonathaneeckhout/jdungeon-database)
