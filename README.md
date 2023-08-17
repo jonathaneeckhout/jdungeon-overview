@@ -10,6 +10,23 @@ An overview repo to link everything together for the jdungeon project
 - [database](https://github.com/jonathaneeckhout/jdungeon-database)
 - [deployer](https://github.com/jonathaneeckhout/jdungeon-deployer)
 
+## Design philosophy
+
+1. Currently the main philosophy is **K.I.S.S.** (Keep It Simple Stupid).
+
+   We are trying to achieve a minimal featured version so that the game is playable and has some content. By limiting the feature and content scope of the game the goal of actually launching this game is feasible.
+
+3. Another philosophy is: **release fast and release often.**
+
+   By taking baby steps in development and making sure everything works and is deployed you will eventually see progress growing.
+
+4. Another goal is **code quality and tests.**
+
+   To be able to achieve a certain level of code quality you need to have tests (unit and system tests). Once the game has the basic feature set this will be my main focus. Without the tests in CI pipelines it is unmanageable to prevent regressions and code quality. It's also a tool to enforce people who contribute to maintain that quality level.
+
+5. The final goal and a very important one is **documentation**.
+
+   The game should be well documented so that people understand and easily add/ adapt code. People should also be able to learn from the code.
 
 ## Architecture
 The heart of JDungeon is the database, this is the place where all persistent information is stored for JDungeon like user credentials, gold, inventory,... 
