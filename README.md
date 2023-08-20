@@ -9,9 +9,15 @@ An overview repo to link everything together for the jdungeon project. Check out
 - [database](https://github.com/jonathaneeckhout/jdungeon-database)
 - [deployer](https://github.com/jonathaneeckhout/jdungeon-deployer)
 
+## Howtos
+
+- [How to run JDungeon locally (on your pc)](https://github.com/jonathaneeckhout/jdungeon-overview/blob/main/howtos/HowToRunLocally.md)
+- [How to contribute code to the project](https://github.com/jonathaneeckhout/jdungeon-overview/blob/main/howtos/HowToContribute.md)
+
+
 ## Design philosophy
 
-1. Currently the main philosophy is **K.I.S.S.** (Keep It Simple Stupid).
+1. Currently the main philosophy is **K.I.S.S.** (Keep It Simple Stupid).https://github.com/jonathaneeckhout/jdungeon-client
 
    We are trying to achieve a minimal featured version so that the game is playable and has some content. By limiting the feature and content scope of the game the goal of actually launching this game is feasible.
 
