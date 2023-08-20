@@ -13,6 +13,7 @@ An overview repo to link everything together for the jdungeon project. Check out
 
 - [How to run JDungeon locally (on your pc)](https://github.com/jonathaneeckhout/jdungeon-overview/blob/main/howtos/HowToRunLocally.md)
 - [How to contribute code to the project](https://github.com/jonathaneeckhout/jdungeon-overview/blob/main/howtos/HowToContribute.md)
+- [How to create a new item](https://github.com/jonathaneeckhout/jdungeon-overview/blob/main/howtos/HowToCreateNewItem.md)
 
 
 ## Design philosophy
