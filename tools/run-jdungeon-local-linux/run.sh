@@ -10,8 +10,8 @@ start_process() {
     echo "Starting common-server"
     ./run-common-server.sh &
 
-    # echo "Starting website"
-    # ./run-website.sh &
+    echo "Starting website"
+    ./run-website.sh &
 
     echo "Starting level server"
     ./run-level-server.sh &
