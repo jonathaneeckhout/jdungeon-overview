@@ -1,5 +1,5 @@
-# How to run JDungeon's development environment on a linux based system
-This howto will explain you how to run the JDungeon's development environment on a Linux based system with the help of some scripts. JDungeon's working environment can be installed by executing only 2 scripts. The JDungeon working environment contains all the needed tools to run/develop/debug JDugeon.
+# Helper script to run JDungeon's development environment on a linux based system.
+This README will explain you how to run the JDungeon's development environment on a Linux based system with the help of some scripts. JDungeon's working environment can be installed by executing only 2 scripts. The JDungeon working environment contains all the needed tools to run/develop/debug JDugeon.
 
 ## Install the dependencies
 Make sure to have following packages installed on your system:
