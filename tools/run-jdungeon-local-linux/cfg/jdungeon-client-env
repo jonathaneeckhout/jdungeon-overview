@@ -1,0 +1,8 @@
+DEBUG=true
+
+COMMON_SERVER_ADDRESS=https://localhost:3000
+COMMON_SERVER_HOST=localhost
+COMMON_SERVER_PORT=3000
+
+DEBUG_USERNAME=testplayer
+DEBUG_PASSWORD=testpassword

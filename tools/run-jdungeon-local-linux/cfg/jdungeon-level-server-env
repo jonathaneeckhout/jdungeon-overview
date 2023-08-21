@@ -1,0 +1,12 @@
+DEBUG=true
+
+LEVEL_PORT=4432
+LEVEL_MAX_PEERS=128
+
+LEVEL="Grassland"
+SECRET="testpassword"
+
+LEVEL_CRT=../localhost.crt
+LEVEL_KEY=../localhost.key
+
+COMMON_SERVER_ADDRESS="https://localhost:3000"

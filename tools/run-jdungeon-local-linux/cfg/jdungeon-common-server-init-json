@@ -1,0 +1,10 @@
+{
+   "levels": [
+       {
+           "level": "Grassland",
+           "key": "testpassword",
+           "address": "127.0.0.1",
+           "port": 4432
+       }
+   ]
+}

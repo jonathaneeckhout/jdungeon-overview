@@ -1,0 +1,10 @@
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=testuser
+POSTGRES_PASSWORD=testpassword
+POSTGRES_DB=jdungeon
+
+DEBUG=true
+
+CERT_PATH=../localhost.crt
+KEY_PATH=../localhost.key
